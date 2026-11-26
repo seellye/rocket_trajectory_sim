@@ -2,7 +2,9 @@
 
 A **1D vertical rocket launch simulator** written in Python, with graphical output. It models **thrust**, **gravity**, **atmospheric drag** and **variable mass** (propellant consumption), integrating the equations of motion with **4th-order Runge-Kutta (RK4)**.
 
-[![Trajectory overview](plots/trajectory_overview.png)](plots/trajectory_overview.png)
+<a href="https://github.com/user-attachments/assets/3a920474-2dcb-48f0-9c3c-c7ef5eae0f25">
+  <img width="700" alt="Trajectory overview" src="https://github.com/user-attachments/assets/3a920474-2dcb-48f0-9c3c-c7ef5eae0f25" />
+</a>
 
 ## Features
 
