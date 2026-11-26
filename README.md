@@ -1,12 +1,10 @@
-# Rocket Trajectory Simulator 1D
+# 🚀 Rocket Trajectory Simulator 1D
 
 A **1D vertical rocket launch simulator** written in Python, with graphical output. It models **thrust**, **gravity**, **atmospheric drag** and **variable mass** (propellant consumption), integrating the equations of motion with **4th-order Runge-Kutta (RK4)**.
 
-<a href="https://github.com/user-attachments/assets/3a920474-2dcb-48f0-9c3c-c7ef5eae0f25">
-  <img width="700" alt="Trajectory overview" src="https://github.com/user-attachments/assets/3a920474-2dcb-48f0-9c3c-c7ef5eae0f25" />
-</a>
+![Trajectory overview](plots/trajectory_overview.png)
 
-## Features
+## ✨ Features
 
 - `Rocket` class with configurable parameters (dry mass, propellant, thrust, flow rate, `Cd`, area…)
 - **Constant** or **variable** thrust (via a `t -> N` function)
@@ -17,7 +15,7 @@ A **1D vertical rocket launch simulator** written in Python, with graphical outp
 - Altitude, velocity and acceleration plots saved automatically to `plots/`
 - Type hints and docstrings throughout
 
-## Project structure
+## 📁 Project structure
 
 ```
 rocket-trajectory-sim/
@@ -33,12 +31,12 @@ rocket-trajectory-sim/
 └── plots/               # generated plots (PNG)
 ```
 
-## Installation
+## 🔧 Installation
 
 Requires **Python 3.10+**.
 
 ```bash
-git clone https://github.com/<seellye>/rocket-trajectory-sim.git
+git clone https://github.com/<your-username>/rocket-trajectory-sim.git
 cd rocket-trajectory-sim
 
 # (optional) virtual environment
@@ -48,7 +46,7 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Usage
+## ▶️ Usage
 
 From the repository root:
 
@@ -89,7 +87,7 @@ rocket = Rocket(
 )
 ```
 
-## Physics
+## 🧮 Physics
 
 The state is `(h, v)` (altitude and velocity, positive upward):
 
@@ -117,7 +115,7 @@ The program uses this as a theoretical ceiling and breaks down the gap to the re
 
 With drag turned off, the RK4 simulation matches the analytical solution (burnout altitude and velocity, apogee and flight time) to numerical precision, and results already converge at `dt = 0.1 s`.
 
-## Example output
+## 📊 Example output
 
 Parameters: dry mass 50 kg · propellant 100 kg · thrust 3000 N · consumption 2.5 kg/s · Cd 0.5 · A 0.1 m².
 
@@ -173,7 +171,7 @@ Plots generated in `plots/`:
 
 > **Note:** the impact velocity (≈ 134 m/s) is higher than the sea-level terminal velocity (≈ 127 m/s) because the rocket falls from altitudes where the air is thinner. The sharp deceleration peak right after burnout comes from high drag at ~400 m/s combined with the sudden loss of thrust.
 
-## Model limitations
+## ⚠️ Model limitations
 
 - **Vertical-only** motion (1D): no wind, no Earth rotation and no launch angle
 - Constant `Cd` (in practice it varies with Mach number, especially near the speed of sound)
@@ -181,7 +179,7 @@ Plots generated in `plots/`:
 - Thrust independent of ambient pressure (no sea-level vs vacuum correction)
 - No parachute: the rocket free-falls until impact
 
-## Possible future improvements
+## 🔭 Possible future improvements
 
 - [ ] Unit tests with `pytest` (comparison against the analytical no-drag solution)
 - [ ] Layered ISA standard atmosphere
@@ -194,6 +192,6 @@ Plots generated in `plots/`:
 - [ ] Ascent animation with `matplotlib.animation`
 - [ ] Packaging (`pyproject.toml`) for `pip install`
 
-## License
+## 📄 License
 
 Choose the license you prefer (e.g. MIT) before publishing.
